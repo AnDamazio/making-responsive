@@ -36,10 +36,6 @@ main {
   justify-content: space-between;
 }
 
-.main-header > div {
-  display: inline-block;
-  vertical-align: middle;
-}
 
 .toggle-button {
   width: 3rem;
@@ -58,9 +54,7 @@ main {
   }
 
   .main-nav {
-    display: inline-block !important;
-    text-align: right;
-    vertical-align: middle;
+    display: flex !important;
   }
 }
 
@@ -81,13 +75,12 @@ main {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  height: 2.5rem;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .main-header__brand img {
-  height: 100%;
+  height: 2.5rem;
+  vertical-align: middle;
+
 }
 
 .main-nav {
@@ -98,10 +91,10 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .main-nav__item {
-  display: inline-block;
   margin: 0 1rem;
 }
 
@@ -146,12 +139,13 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-footer__link {
-  display: block;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .main-footer__link a {
@@ -176,12 +170,15 @@ main {
 }
 
 .mobile-nav__items {
-  width: 90%;
-  height: 100%;
   list-style: none;
-  margin: 10% auto;
   padding: 0;
-  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .mobile-nav__item {
@@ -221,12 +218,16 @@ main {
 }
 
 .open {
-    display: block !important;
+    display: inline-block !important;
 }
 
 @media(min-width: 40rem) {
   .main-footer__link {
-    display: inline-block !important;
     margin: 0 1rem;
+  }
+
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
   }
  }
